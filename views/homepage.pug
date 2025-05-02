@@ -1,0 +1,35 @@
+//- ** This is a sample of a pug template and how it uses the data passed to it from index.js.
+
+doctype html
+html
+  head
+    title Lista de Filmes
+    style.
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+      }
+      th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+  body
+    h1(style="text-align: center") Movie List
+    a(href="/update-cobj") ➕ Add/Update this table
+    table
+      thead
+        tr
+          th Name
+          th Category
+          th Duration
+      tbody
+        each movie in movies
+          tr
+            td= movie.name
+            td= movie.category
+            td= movie.duration
