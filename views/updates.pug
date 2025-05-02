@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Criar Novo Registro
+  body
+    h1 Criar Novo Registro
+
+    form(action="/update-cobj" method="post")
+      div
+        label(for="name") Name:
+        input(type="text" id="name" name="name" required)
+      div
+        label(for="category") Category:
+        input(type="text" id="category" name="category" required)
+      div
+        label(for="duration") Duration:
+        input(type="text" id="duration" name="duration" required)
+      div
+        button(type="submit") Enviar
